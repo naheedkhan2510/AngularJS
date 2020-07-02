@@ -50,3 +50,13 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+.result {
+  float: left;
+  clear: left;
+}
+
+h2 {
+  color: red;
+  display: none;
+}
