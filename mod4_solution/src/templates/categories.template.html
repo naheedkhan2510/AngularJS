@@ -1,0 +1,15 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Short Name</th>
+      <th scope="col">Name</th>
+      <th scope="col">Special Instruction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="category in $ctrl.data">
+      <td class="abc" ui-sref="items({categoryShortName: category.short_name})">{{ category.short_name}}</td>
+      <td>{{ category.name}}</td>
+      <td>{{ category.special_instructions}}</td>
+</tbody>
+</table>

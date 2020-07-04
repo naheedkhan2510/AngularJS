@@ -1,0 +1,15 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Short Name</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in $ctrl.data.menu_items">
+      <td>{{item.short_name}}</td>
+      <td>{{item.name | uppercase }}</td>
+      <td>{{item.description}}</td>
+</tbody>
+</table>

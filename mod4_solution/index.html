@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="MenuApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Mod4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="container">
+      <h1>Welcome To Our Restaurant!</h1>
+      <br>
+<hr>
+<br>
+      <ui-view></ui-view>
+
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <script src="src/menuapp/menuapp.module.js"></script>
+    <script src="src/data/data.module.js"></script>
+
+    <script src="src/routes.js"></script>
+
+    <script src="src/data/menudata.service.js"></script>
+
+    <script src="src/menuapp/categories.controller.js"></script>
+    <script src="src/menuapp/items.controller.js"></script>
+
+    <script src="src/menuapp/categories.component.js"></script>
+    <script src="src/menuapp/items.component.js"></script>
+
+  </body>
+</html>
