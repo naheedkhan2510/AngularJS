@@ -1,0 +1,37 @@
+<div class="col-sm-6">
+    <form name="signForm" novalidate>
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" name="firstName" ng-model="$ctrl.firstName" required>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" name="lastName" ng-model="$ctrl.lastName" required>
+        </div>
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" class="form-control" name="email" ng-model="$ctrl.email" required>
+        </div>
+        <div class="form-row" id="form-row">
+          <div class="form-group col-sm-6">
+            <label>Phone Number</label>
+            <input type="text" class="form-control" name="phone" ng-model="$ctrl.phone" minlenght="9" required>
+          </div>
+          <div class="form-group col-sm-6">
+            <label>Menu Number</label>
+            <input type="text" class="form-control" name="Menu" ng-model="$ctrl.menuNumber" required>
+            <p class="form-error"ng-if="$ctrl.warning">Selected menu item does not exist. Correct your menu selection and try again.</p>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="$ctrl.signUp();" ng-disabled="signForm.$invalid">Submit</button>
+    </form>
+
+</div>
+<div class="col-sm-6">
+  <div class="user-registration" ng-if="$ctrl.success">
+    <h3>User successfully created:</h3>
+    <h5>Name: {{$ctrl.user.firstName}} {{$ctrl.user.lastName}}</h5>
+    <h5>Email: {{$ctrl.user.email}}</h5>
+    <h5>Phone: {{$ctrl.user.phone}}</h5>
+  </div>
+</div>

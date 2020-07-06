@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="user-details" ng-if="$ctrl.registeredUser();">
+                <h2 class="title">
+                    {{$ctrl.userModel.firstName}} {{$ctrl.userDetails.lastName}}
+                </h2>
+                <h5 class="email">
+                    {{$ctrl.userModel.email}}
+                </h5>
+                <h5 class="phone">
+                    {{$ctrl.userModel.phone}}
+                </h5>
+
+                <div class="menu-selection">
+                    <h4 class="selection-text">{{$ctrl.menuItem.name}}</h4>
+                    <h5 class="selection-text">{{$ctrl.menuItem.short_name}}</h5>
+                    <h5 class="selection-text">{{$ctrl.menuItem.description}}</h5>
+                    <img class="img-responsive selection-image" width="250" height="150" ng-src="{{$ctrl.basePath}}/images/{{$ctrl.menuItem.short_name}}.jpg" alt="{{$ctrl.menuItem.name}}">
+                </div>
+            </div>
+            <h3 id="warning" ng-if="$ctrl.warning">
+                No user has been registered! Please click <a href="" ui-sref="public.signup">here</a> to register.
+            </h3>
+        </div>
+    </div>
+</div>
